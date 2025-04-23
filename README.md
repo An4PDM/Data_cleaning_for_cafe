@@ -29,16 +29,11 @@ The dataset was cleaned and transformed incrementally, with each step saved as a
   - Imputed missing values in `Quantity` by dividing `Total Spent` by `Price Per Unit`
   - Updated missing values in `Total Spent` by multiplying `Quantity` and `Price Per Unit`
 
-- **data_step2.pkl**
+- **data_step2.pkl** (in progress)
+  - Removed NaN and replaced values in `Item` and `Payment Method` 
   - Removed redundant or duplicate rows
   - Standardized column names (e.g., lowercase, underscores)
   - Trimmed whitespace in string values
-
-- **data_step3.pkl**
-
-- **data_step4.pkl**
-
-  - Verified consistency in computed totals
 
 ### 🔄 File Naming Convention
 
