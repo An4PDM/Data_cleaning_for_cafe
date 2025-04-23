@@ -15,13 +15,35 @@ This project aims to transform and clean data from a cafe by eliminating redunda
 - Pandas
 - Jupyter Notebook (for development and visualization)
 
-## 🧹 Cleaning Steps
+## 🧼 Data Cleaning Steps
 
-1. **Load and inspect raw data**
-2. **Detect non-numeric values in numeric columns**
-3. **Handle missing values (`NaN`)**
-4. **Fix data types and column inconsistencies**
-5. **Create a cleaned version of the dataset**
+The dataset was cleaned and transformed incrementally, with each step saved as a `.pkl` file for reproducibility and version control.
+
+### ✅ Checkpoints
+
+- **data_step1.pkl**
+
+  - Set all `Price Per Unit` values for each item correctly
+  - Converted `Quantity`, `Price Per Unit`, and `Total Spent` to numeric types
+  - Replaced non-numeric values with `NaN` (using `pd.to_numeric` with `errors='coerce'`)
+  - Imputed missing values in `Quantity` by dividing `Total Spent` by `Price Per Unit`
+  - Updated missing values in `Total Spent` by multiplying `Quantity` and `Price Per Unit`
+
+- **data_step2.pkl**
+  - Removed redundant or duplicate rows
+  - Standardized column names (e.g., lowercase, underscores)
+  - Trimmed whitespace in string values
+
+- **data_step3.pkl**
+
+- **data_step4.pkl**
+
+  - Verified consistency in computed totals
+
+### 🔄 File Naming Convention
+
+Each step is saved as `data_stepN.pkl`, where `N` indicates the transformation phase.
+
 
 ## 💡 Key Learnings
 
