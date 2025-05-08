@@ -30,10 +30,11 @@ The dataset was cleaned and transformed incrementally, with each step saved as a
   - Updated missing values in `Total Spent` by multiplying `Quantity` and `Price Per Unit`
 
 - **data_step2.pkl** (in progress)
-  - Removed NaN and replaced values in `Item` and `Payment Method` 
+  - Removed NaN and replaced values in `Item` 
   - Removed redundant or duplicate rows
-  - Standardized column names (e.g., lowercase, underscores)
-  - Trimmed whitespace in string values
+
+    
+
 
 ### 🔄 File Naming Convention
 
