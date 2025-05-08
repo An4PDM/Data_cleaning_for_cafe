@@ -29,12 +29,15 @@ The dataset was cleaned and transformed incrementally, with each step saved as a
   - Imputed missing values in `Quantity` by dividing `Total Spent` by `Price Per Unit`
   - Updated missing values in `Total Spent` by multiplying `Quantity` and `Price Per Unit`
 
-- **data_step2.pkl** (in progress)
-  - Removed NaN and replaced values in `Item` 
-  - Removed redundant or duplicate rows
+- **data_step2.pkl**
+  - Identified and replaced invalid `Item` values (UNKNOWN, ERROR, NaN)
+  - Used Quantity and Price Per Unit to infer the most likely Item based on frequency
+  - Removed redundant or duplicate rows after corrections
 
-    
-
+  **data_step3.pkl**
+  - Cleaned the Payment Method column by replacing UNKNOWN, ERROR, and missing values
+  - Used Item, Quantity, and Price Per Unit to infer the most likely payment method
+  - Ensured consistency based on historical purchase patterns
 
 ### 🔄 File Naming Convention
 
